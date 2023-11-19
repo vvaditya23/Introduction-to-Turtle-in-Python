@@ -1,11 +1,15 @@
 from turtle import Turtle, Screen
-import random
-
+from random import randrange
+from webcolors import rgb_to_name
 angle = 360
 turtle = Turtle()
 
 for i in range(10):
     if i == 3:
+        r = randrange(255)
+        g = randrange(255)
+        b = randrange(255)
+        print(rgb_to_name(rgb_triplet= (r, g, b)))
         turtle.forward(100)
         turtle.right(angle / 3)
         turtle.forward(100)
